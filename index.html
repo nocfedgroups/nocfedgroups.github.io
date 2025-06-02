@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>nocfed hover</title>
+    <title>nocfed - Sized Container Test</title>
     <style>
         body, html {
             height: 100%;
@@ -18,11 +18,14 @@
 
         .image-container {
             position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            display: flex;
+            max-width: 90vw;  
+            max-height: 90vh; 
+            width: 90vw;      
+            height: 90vh;     
+            
+            display: flex; 
             justify-content: center;
-            align-items: center;
+            align-items: center;            
         }
 
         .image-container img {
@@ -34,7 +37,8 @@
             top: 0;
             left: 0;
             opacity: 1;
-            transition: opacity 0.3s ease-in-out;
+            transition: opacity 0.3s ease-in-out;         
+            
         }
 
         .image-container img:nth-child(2) {
@@ -52,8 +56,8 @@
 </head>
 <body>
     <div class="image-container">
-        <img src="nocfed.png" alt="nocfed logo - initial">
-        <img src="fedup.png" alt="fedup - on hover">
+        <img src="nocfed.png" alt="nocfed logo">
+        <img src="fedup.png" alt="fedup">
     </div>
 </body>
 </html>
