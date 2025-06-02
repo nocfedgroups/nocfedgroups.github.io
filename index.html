@@ -13,18 +13,44 @@
             display: flex;
             justify-content: center; 
             align-items: center;     
-            overflow: hidden; 
+            overflow: hidden;
+            position: relative; 
         }
-        img {
-            max-width: 90%;  
-            max-height: 90vh; 
-            display: block; 
+
+        .image-container {
+            position: relative; 
+        }
+
+        .image-container img {
+            max-width: 90%;
+            max-height: 90vh;
+            display: block;
             margin: auto;
+            position: absolute; 
+            top: 0;
+            left: 0;
+            opacity: 1; 
+            transition: opacity 0.3s ease-in-out; 
+        }
+
+        .image-container img:last-child {
+            opacity: 0; 
+        }
+
+        .image-container:hover img:first-child {
+            opacity: 0; 
+        }
+
+        .image-container:hover img:last-child {
+            opacity: 1; 
         }
     </style>
 </head>
 <body>
-    <img src="nocfed.png" alt="nocfed logo">
-    <!-- What are you going to do, sue me?  Expect Us... -->
+    <div class="image-container">
+        <img src="nocfed.png" alt="nocfed logo">
+        <img src="fedup.png" alt="fedup">
+        <!-- No really, how in the hell did defcon not register this domain? Expect us... -->
+    </div>
 </body>
 </html>
